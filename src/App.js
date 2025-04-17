@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+// import * as React from 'react';
 import './App.css';
+import SwitchThem from './components/SwitchThem';
+import store from './components/store';
+// import { useEffect } from 'react';
 
 function App() {
+
+  // console.log(localStorage.getItem('theme'));
+  
+  // const initialState = localStorage.getItem('theme') || 'темную';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div id='infinity' data-theme='light-theme' className="main__container ">
+      <Provider store={store}>
+        <SwitchThem />
+      </Provider>
     </div>
   );
 }
 
+// // localStorage.clear()
 export default App;
+
+// 

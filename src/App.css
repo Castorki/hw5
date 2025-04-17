@@ -32,7 +32,50 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.main__container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.light-theme,
+.main__container[data-theme='light-theme'] {
+  background: white;
+  color: black;
+  /* width: 100vw;
+  height: 100vh; */
+  margin: 0;
+  padding: 0;
+}
+
+.dark-theme, .main__container[data-theme='dark-theme'] {
+  background: black;
+  color: white;
+  /* width: 100vw;
+  height: 100vh; */
+  margin: 0;
+  padding: 0;
+}
+
+.theme-button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.light-theme .theme-button {
+  background: gray;
+  color: black;
+  border: 1px solid black;
+
+}
+
+.dark-theme .theme-button {
+  background: black;
+  color: white;
+  border: 1px solid white;
 }
